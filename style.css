@@ -43,3 +43,63 @@ header > nav > ul > li:hover {
     cursor: pointer;
     background-color: red;
 }
+
+.poster {
+    /* background-color: #fff; */
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.poster > .poster-info {
+    position: absolute;
+    color: #fff;
+    font-size: 4rem;
+    text-align: center;
+}
+
+.poster > img {
+    object-fit: cover;
+    width: 100vw;
+    height: 60vh;
+}
+
+article {
+    max-width: 70vw;
+    margin: 3rem auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.5);
+    padding: 3rem;
+    border-radius: 1rem;
+    cursor: pointer;
+    transition: all 0.5s;
+    
+}
+
+article:hover {
+    transform: scale(1.05);
+    filter: invert(1) ;
+}
+
+article > div {
+    max-width: 50%;
+}
+
+article > .info-text {
+    font-size: 2rem;
+    align-self: start;
+}
+
+article > .info-img { 
+    display: flex;
+    justify-content: right;
+}
+
+article > .info-img > img{
+    max-width: 50%;
+    max-height: 100%;
+    object-fit: contain;
+}

@@ -9,6 +9,7 @@
 
 <body>
     <!-- <form action="https://formspree.io/f/xleojkjo" method="POST"> -->
+    <h1>Please fill in this form before <span class="deadline">Sunday 20th of June (20-6-21)</span> to let us know if you will be there to celebrate with us.</h1>
     <form action="#" method="POST">
         <fieldset>
             <h2>Name(s):</h2>
@@ -30,26 +31,27 @@
             <input type="radio" id="sleeping_no" name="sleeping" value="no">
             <label for="sleeping_no">No</label><br>
         </fieldset>
+
         <div class="sharing_tippies_warning">
             <p>Please note: It is very likely that you will be sharing your tippie/yurt with a few other guests.</p>
             <p>If that is a no go for you, but you do want to sleep at the location, please let us know so we can see
                 what we can arrange for you.</p>
         </div>
 
-        <fieldset class="days_sleeping">
-            <h2></h2>
+        <fieldset class="nights_sleeping">
+            <h2>Which nights do you want to sleep there?</h2>
+            <p>(you may select all, as all nights are included)</p>
             <input type="checkbox" id="friday_saturday" name="friday_saturday" value="yes">
-            <label for="friday_saturday"> I have a bike</label><br>
+            <label for="friday_saturday">Friday - Saturday</label><br>
             <input type="checkbox" id="saturday_sunday" name="saturday_sunday" value="yes">
-            <label for="saturday_sunday"> I have a car</label><br>
+            <label for="saturday_sunday">Saturday - Sunday</label><br>
             <input type="checkbox" id="sunday_monday" name="sunday_monday" value="yes">
-            <label for="sunday_monday"> I have a boat</label>
+            <label for="sunday_monday">Sunday - Monday</label>
         </fieldset>
 
-
-
-        <fieldset>
-
+        <fieldset class="allergies">
+            <h2>All the food will be vegan. <br> If you have any allergies that we should know about, please let us know here.</h2>
+            <input type="text" name="allergies">
         </fieldset>
 
         <input type="submit" value="Send">

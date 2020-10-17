@@ -1,105 +1,75 @@
 * {
-    margin: 0;
     padding: 0;
+    margin: 0;
     box-sizing: border-box;
+}
+
+:root {
+    --darkGreenColor: rgb(2, 68, 2);
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
 }
 
 html {
     font-size: 62.5%;
+    font-family: 'Commissioner', sans-serif;}
+
+.active {
+    background-color: var(--darkGreenColor);
+    color: white;
 }
 
-body {
-    font-size: 1.8rem;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    min-height: 100vh;
+nav {
     width: 100vw;
-    background-image: linear-gradient(70deg, rgb(138, 77, 77), rgb(231, 157, 157));
-    background-attachment: fixed;
+    background-color: darkgreen;
+    color: white;
 }
 
-header {
-    width: 100vw;
-    background-color: #fff;
-}
-
-header > nav {
-    width: 70vw;
+nav ul {
+    width: 60vw;
     margin: 0 auto;
-}
-
-header > nav > ul {
-    list-style-type: none;
     display: flex;
-    justify-content: space-between;
-}
-
-header > nav > ul > li{
-    display: inline;
-    padding: 2rem;
-    transition: all 0.5s;
-}
-
-header > nav > ul > li:hover {
-    cursor: pointer;
-    background-color: red;
-}
-
-.poster {
-    /* background-color: #fff; */
-    position: relative;
-    display: flex;
-    align-items: center;
     justify-content: center;
 }
 
-.poster > .poster-info {
-    position: absolute;
-    color: #fff;
-    font-size: 4rem;
-    text-align: center;
-}
-
-.poster > img {
-    object-fit: cover;
-    width: 100vw;
-    height: 60vh;
-}
-
-article {
-    max-width: 70vw;
-    margin: 3rem auto;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: rgba(255, 255, 255, 0.5);
-    padding: 3rem;
-    border-radius: 1rem;
-    cursor: pointer;
-    transition: all 0.5s;
-    
-}
-
-article:hover {
-    transform: scale(1.05);
-    filter: invert(1) ;
-}
-
-article > div {
-    max-width: 50%;
-}
-
-article > .info-text {
+nav ul li {
+    display: inline-block;
     font-size: 2rem;
-    align-self: start;
+    padding: 2rem 3rem;
+    /* border: violet 1px solid; */
 }
 
-article > .info-img { 
+.cuties {
+    width: 100vw;
+    height: 80vh;
+    padding: 4rem;
     display: flex;
-    justify-content: right;
+    flex-direction: column;
+    position: relative;
 }
 
-article > .info-img > img{
-    max-width: 50%;
-    max-height: 100%;
-    object-fit: contain;
+.cuties > img {
+    object-fit: cover;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+
+.cuties > h1 {
+    z-index: 2;
+    color: white;
+    width: 80%;
+}
+
+.cuties > p {
+    z-index: 2;
+    font-size: 1.5rem;
+    color: white;
+    width: 80%;
 }

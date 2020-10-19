@@ -25,7 +25,7 @@ const updateCountDown = (countDownDate) => {
     }
     else
     {
-        document.getElementById("countdown").innerHTML = `${days} days & ${hours}:${minutes}:${seconds} hours until we say 'I DO'!`;
+        document.getElementById("countdown").innerHTML = `${days} days ${hours}:${minutes}:${seconds}<br>until we say 'I DO'!`;
     }
 }
 

@@ -42,7 +42,7 @@ nav ul li {
     /* border: violet 1px solid; */
 }
 
-.cuties {
+.landing-poster {
     width: 100vw;
     height: 80vh;
     padding: 4rem;
@@ -51,7 +51,7 @@ nav ul li {
     position: relative;
 }
 
-.cuties > img {
+.landing-poster > img {
     object-fit: cover;
     position: absolute;
     width: 100%;
@@ -61,15 +61,13 @@ nav ul li {
     z-index: 1;
 }
 
-.cuties > h1 {
+.landing-poster > h1 {
     z-index: 2;
-    color: white;
     width: 80%;
 }
 
-.cuties > p {
+.landing-poster > p {
     z-index: 2;
     font-size: 1.5rem;
-    color: white;
     width: 80%;
 }

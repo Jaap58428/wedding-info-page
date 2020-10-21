@@ -1,0 +1,35 @@
+form {
+    width: 60vw;
+    margin: 2rem auto;
+    font-size: 1.4rem;
+}
+
+fieldset {
+    padding: 1.2rem;
+    background-color: var(--lightGreenColor);
+    margin: 2rem 0;
+    border: 0;
+}
+
+.name, .coming, .sleeping {
+    display: flex;
+    justify-content: space-between;
+}
+
+.name input {
+    width: 85%;
+}
+
+.sharing_tippies_warning {
+    font-size: 2rem;
+    color: crimson  ;
+}
+
+.allergies input {
+    height: 8rem;
+    width: 85%
+}
+
+.submit-box input {
+    justify-self: right;
+}

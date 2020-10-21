@@ -6,7 +6,7 @@
 
 :root {
     --darkGreenColor: rgb(2, 68, 2);
-    --lightGreenColor: rgb(149, 250, 149);
+    --lightGreenColor: rgb(44, 163, 54);
 }
 
 a {
@@ -41,8 +41,13 @@ nav ul {
 nav ul li {
     display: inline-block;
     font-size: 2rem;
-    padding: 2rem 3rem;
     /* border: violet 1px solid; */
+    padding: 2rem;
+}
+
+nav ul li a:hover {
+    cursor: pointer;
+    color: var(--lightGreenColor);
 }
 
 .landing-poster {
@@ -66,20 +71,24 @@ nav ul li {
 
 .landing-poster > h1 {
     z-index: 2;
-    width: 80%;
+    font-size: 4rem;
+    color: var(--darkGreenColor);
+    width: 75%;
+    margin: 0 auto;
+    font-family: 'Indie Flower', cursive;
 }
 
 .landing-poster > p {
     z-index: 2;
-    font-size: 1.5rem;
-    width: 80%;
+    font-size: 2.5rem;
+    width: 75%;
+    margin: 0 auto;
     flex-grow: 1;
 }
 
 .landing-poster > .countdown {
     z-index: 3;
     font-size: 4rem;
-    margin-top: 2rem;
     color: rgb(9, 97, 0);
     /* text-shadow: 2px 0 0 black, -2px 0 0 black, 0 2px 0 black, 0 -2px 0 black, 1px 1px black, -1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black; */
     background-color: rgba(253, 253, 253, 0.5);
@@ -89,3 +98,43 @@ nav ul li {
     text-align: center;
     align-self: flex-end;
 }
+
+.info-details {
+    max-width: 75vw;
+    margin: 0 auto;
+}
+
+.info-item {
+    display: flex;
+    justify-content: space-between;
+    /* border-bottom: 2px solid rgba(165, 165, 165, 0.445); */
+    margin: 4rem 0;
+    background-color: var(--lightGreenColor);
+}
+
+.info-item-text {
+    max-width: 70%;
+    font-size: 2rem;
+    padding: 3rem;
+    line-height: 2.8rem;
+    color: white;
+}
+
+.info-item-text h2 {
+    font-size: 3rem;
+    padding-bottom: 1.6rem;
+    font-family: 'Indie Flower', cursive;
+    color: var(--darkGreenColor);
+}
+
+.info-item-image {
+    max-width: 30%;
+    object-fit: contain;
+}
+
+.info-item-image img{
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+}
+

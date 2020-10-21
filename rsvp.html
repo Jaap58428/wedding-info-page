@@ -4,58 +4,81 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="shortcut icon" href="img/favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="formStyle.css">
+    <link href="https://fonts.googleapis.com/css2?family=Commissioner&family=Indie+Flower&display=swap" rel="stylesheet"> 
+    <title>RSVP</title>
 </head>
 
 <body>
-    <!-- <form action="https://formspree.io/f/xleojkjo" method="POST"> -->
-    <h1>Please fill in this form before <span class="deadline">Sunday 20th of June (20-6-21)</span> to let us know if you will be there to celebrate with us.</h1>
-    <form action="#" method="POST">
-        <fieldset>
-            <h2>Name(s):</h2>
-            <input type="text" required name="name">
-        </fieldset>
 
-        <fieldset class="coming">
-            <h2>I will be there:</h2>
-            <input type="radio" id="coming_yes" name="coming" value="yes">
-            <label for="coming_yes">Yes</label><br>
-            <input type="radio" id="coming_no" name="coming" value="no">
-            <label for="coming_no">No</label><br>
-        </fieldset>
+    <script>
+        alert("TODO MAKE A NICE JS WITH OPENING QUESTIONS AS YOU ANSWER THEM")
+    </script>
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="#">Location</a></li>
+            <li><a href="#">Timeline</a></li>
+            <li class="active"><a href="rsvp.html">RSVP</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </nav>
+    <main>
+        <!-- <form action="https://formspree.io/f/xleojkjo" method="POST"> -->
+            <form action="#" method="POST">
+            <h1>Please fill in this form before <span class="deadline">Sunday 20th of June (20-6-21)</span> to let us know if you will be there to celebrate with us.</h1>
+            <fieldset class="name">
+                <h2>Name(s):</h2>
+                <input type="text" required name="name">
+            </fieldset>
 
-        <fieldset class="sleeping">
-            <h2>I want to sleep there:</h2>
-            <input type="radio" id="sleeping_yes" name="sleeping" value="yes">
-            <label for="sleeping_yes">Yes</label><br>
-            <input type="radio" id="sleeping_no" name="sleeping" value="no">
-            <label for="sleeping_no">No</label><br>
-        </fieldset>
+            <fieldset class="coming">
+                <h2>I will be there:</h2>
+                <div>
+                    <input type="radio" id="coming_yes" name="coming" value="yes">
+                    <label for="coming_yes">Yes</label><br>
+                    <input type="radio" id="coming_no" name="coming" value="no">
+                    <label for="coming_no">No</label><br>
+                </div>
+            </fieldset>
 
-        <div class="sharing_tippies_warning">
-            <p>Please note: It is very likely that you will be sharing your tippie/yurt with a few other guests.</p>
-            <p>If that is a no go for you, but you do want to sleep at the location, please let us know so we can see
-                what we can arrange for you.</p>
-        </div>
+            <fieldset class="sleeping">
+                <h2>I want to sleep there:</h2>
+                <div>
+                    <input type="radio" id="sleeping_yes" name="sleeping" value="yes">
+                    <label for="sleeping_yes">Yes</label><br>
+                    <input type="radio" id="sleeping_no" name="sleeping" value="no">
+                    <label for="sleeping_no">No</label><br>
+                </div>
+            </fieldset>
 
-        <fieldset class="nights_sleeping">
-            <h2>Which nights do you want to sleep there?</h2>
-            <p>(you may select all, as all nights are included)</p>
-            <input type="checkbox" id="friday_saturday" name="friday_saturday" value="yes">
-            <label for="friday_saturday">Friday - Saturday</label><br>
-            <input type="checkbox" id="saturday_sunday" name="saturday_sunday" value="yes">
-            <label for="saturday_sunday">Saturday - Sunday</label><br>
-            <input type="checkbox" id="sunday_monday" name="sunday_monday" value="yes">
-            <label for="sunday_monday">Sunday - Monday</label>
-        </fieldset>
+            <div class="sharing_tippies_warning">
+                <p>Please note: It is very likely that you will be sharing your tippie/yurt with a few other guests.</p>
+                <p>If that is a no go for you, but you do want to sleep at the location, please let us know so we can see
+                    what we can arrange for you.</p>
+            </div>
 
-        <fieldset class="allergies">
-            <h2>All the food will be vegan. <br> If you have any allergies that we should know about, please let us know here.</h2>
-            <input type="text" name="allergies">
-        </fieldset>
+            <fieldset class="nights_sleeping">
+                <h2>Which nights do you want to sleep there?</h2>
+                <p>(you may select all, as all nights are included)</p>
+                <input type="checkbox" id="friday_saturday" name="friday_saturday" value="yes">
+                <label for="friday_saturday">Friday - Saturday</label><br>
+                <input type="checkbox" id="saturday_sunday" name="saturday_sunday" value="yes">
+                <label for="saturday_sunday">Saturday - Sunday</label><br>
+                <input type="checkbox" id="sunday_monday" name="sunday_monday" value="yes">
+                <label for="sunday_monday">Sunday - Monday</label>
+            </fieldset>
 
-        <input type="submit" value="Send">
-    </form>
+            <fieldset class="allergies">
+                <h2>All the food will be vegan. <br> If you have any allergies that we should know about, please let us know here.</h2>
+                <input type="text" name="allergies">
+            </fieldset>
+
+            <input type="submit" value="Send"> MAKE ME STAND RIGHT
+        </form>
+    </main>
 </body>
 
 </html>

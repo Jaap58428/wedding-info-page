@@ -41,4 +41,16 @@ const updateCountDown = (countDownDate) => {
     }
 }
 
+const openMenu = () => {
+    var links = document.getElementById("myLinks");
+    if (links.style.display == "block")
+    {
+        links.style.display = "none";
+    }
+    else
+    {
+        links.style.display = "block";
+    }
+}
+
 window.onload = runTimer

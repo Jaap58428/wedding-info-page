@@ -7,7 +7,19 @@ const runTimer = () => {
 }
 
 const updateCountDown = (countDownDate) => {
-    var difference = countDownDate.getTime() - new Date().getTime();
+    var currentDate = new Date();
+    var difference = countDownDate.getTime() - currentDate.getTime();
+    var targetMonth = countDownDate.getMonth();
+    var currentMonth = currentDate.getMonth();
+    var monthDifference;
+    if (currentDate.getFullYear() == 2020)
+    {
+        monthDifference = targetMonth + (12 - currentMonth);
+    }
+    else
+    {
+        monthDifference = targetMonth - 1;
+    }
     var days = Math.floor(difference / (1000 * 60 * 60 * 24));
     var hours = Math.floor((difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
     var minutes = Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60));
@@ -25,7 +37,7 @@ const updateCountDown = (countDownDate) => {
     }
     else
     {
-        document.getElementById("countdown").innerHTML = `${days} days ${hours}:${minutes}:${seconds}<br>until we say <span class="IDO">"I DO!"</span>`;
+        document.getElementById("countdown").innerHTML = `${monthDifference} months ${days} days ${hours}:${minutes}:${seconds}<br>until we say <span class="IDO">"I DO!"</span>`;
     }
 }
 

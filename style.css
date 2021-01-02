@@ -187,6 +187,73 @@ nav ul li a:hover {
     font-size: 3rem;
 }
 
+.timeline_container {
+    width: 60vw;
+    margin: 0 auto;
+}
+
+.timeline_container > * > :nth-child(1) {
+    width: 20%;
+}
+.timeline_container > * > :nth-child(2) {
+    width: 30%;
+
+}
+.timeline_container > * > :nth-child(3) {
+    width: 10%;
+}
+.timeline_container > * > :nth-child(4) {
+    width: 30%;
+}
+
+.tl_header {
+    margin: 1rem 0;
+    display: flex;
+    justify-content: space-between;
+    font-family: 'Indie Flower', cursive;
+    font-size: 3rem;
+}
+
+.dayHeader {
+    text-align: center;
+}
+
+.tl_header_category{
+    display: inline-block;
+    text-align: center;
+}
+
+.tl_item {
+    display: flex;
+    justify-content: space-between;
+    margin: 1rem 0;
+}
+
+.tl_item_entry {
+    display: inline-flex;
+    text-align: center;
+    padding: 1rem;
+    align-items: center;
+    justify-content: center;
+}
+
+.tl_item_entry_friday {
+    background-color: rgb(148, 211, 158);
+}
+.tl_item_entry_saturday {
+    background-color: rgb(148, 198, 211);
+}
+.tl_item_entry_sunday {
+    background-color: rgb(211, 148, 195);
+}
+
+/* .timeline_container > div {
+    padding: 1rem;
+    background-color: red;
+    text-align: center;
+} */
+
+
 @media (max-width: 800px) {
 
     .landing-poster {

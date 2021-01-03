@@ -9,6 +9,8 @@
     <link rel="stylesheet" href="formStyle.css">
     <link href="https://fonts.googleapis.com/css2?family=Commissioner&family=Indie+Flower&display=swap" rel="stylesheet"> 
     <title>RSVP</title>
+    <script src="passwall.js"></script>
+    <script src="burgermenu.js"></script>
 </head>
 
 <body>
@@ -16,15 +18,27 @@
     <script>
         alert("TODO MAKE A NICE JS WITH OPENING QUESTIONS AS YOU ANSWER THEM")
     </script>
-    <nav>
+    <nav class="regular-nav">
         <ul>
             <li><a href="index.html">Home</a></li>
             <li><a href="location.html">Location</a></li>
-            <li><a href="#">Timeline</a></li>
+            <li><a href="timeline.html">Timeline</a></li>
             <li class="active"><a href="rsvp.html">RSVP</a></li>
-            <li><a href="#">Contact</a></li>
+            <li><a href="contact.html">Contact</a></li>
         </ul>
     </nav>
+    <div class="topnav">
+        <a href="index.html" class="active">Home</a>
+        <div id="myLinks">
+            <a href="location.html">Location</a>
+            <a href="timeline.html">Timeline</a>
+            <a href="rsvp.html">RSVP</a>
+            <a href="contact.html">Contact</a>
+        </div>
+        <a href="javascript:void(0);" class="icon" onclick="openMenu()">
+            <i class="fa fa-bars"></i>
+        </a>
+    </div>
     <main>
         <!-- <form action="https://formspree.io/f/xleojkjo" method="POST"> -->
         <form action="#" method="POST">

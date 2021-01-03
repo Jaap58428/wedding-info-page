@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="img/favicon.png" type="image/x-icon">
+    <title>JuJa's Wedding - Home</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Commissioner&family=Indie+Flower&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="burgermenu.js"></script>
+</head>
+
+<body>
+    <main>
+        <div  id="passwordbg" class="landing-poster">
+            <div class="password_check">
+                <h1>Please enter the password given in your invitation</h1>
+                <input placeholder="Enter password" id="passinput" type="text">
+                <button onclick="checkPass()">Submit</button>
+            </div>
+            <div class="intro">
+                </div>
+            <img src="img/462.jpg" alt="adorable picture of Julia and Jacob being super cute">
+        </div>
+      
+    </main>
+</body>
+
+<script>
+    const setCookie = (cname, cvalue, exdays) => {
+        var d = new Date();
+        d.setTime(d.getTime() + (exdays*24*60*60*1000));
+        var expires = "expires="+ d.toUTCString();
+        document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
+    }
+
+    const checkPass = () => {
+        correctPass = 'adventure'
+        inputElement = document.getElementById('passinput')
+
+        if (inputElement.value == correctPass) {
+            // cookie is set for 10 years: 365 days x 10
+            setCookie('password', 'adventure', 3650)
+            window.location.href = 'index.html'
+        } else {
+            alert("Password incorrect. If you can't remember the password please contact the bride or groom.")            
+            inputElement.value = ""
+        }
+    }
+
+    document.getElementById('passinput').addEventListener("keyup", function(event) {
+    // Number 13 is the "Enter" key on the keyboard
+    if (event.keyCode === 13) {
+        // Cancel the default action, if needed
+        event.preventDefault();
+        // Trigger the button element with a click
+        checkPass()
+    }
+}); 
+
+</script>
+
+</html>

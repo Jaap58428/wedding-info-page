@@ -1,18 +1,27 @@
 timeline_data = 
 {
     friday : [
-        ["14:30", "Wedding", "<3", "Buitenland"],
-        ["14:30", "Wedding", "<3", "Buitenland"],
-        ["14:30", "Wedding", "<3", "Buitenland"],
+        // ["14:30", "Wedding", "<3", "Buitenland"],
+        ["17:00", "Check-in", "🛎️", "Buitenland"],
+        ["17:00 - 19:45", "Free Time", "⛱️", "Wherever you want"],
+        ["20:00", "Legal Ceremony", "💏", "In front of Big Tipi"],
+        ["21:00", "Small Toast At The Campfire", "🥂", "Buitenland"],
     ],
     saturday : [
-        ["14:30", "Wedding", "<3", "Buitenland"],
-        ["14:30", "Wedding", "<3", "Buitenland"],
-        ["14:30", "Wedding", "<3", "Buitenland"],
+        ["11:00", "Departure To Church", "🚌", "Buitenland"],
+        ["12:00", "Church Wedding", "💒", "Somewhere"],
+        ["13:00", "Toast & Lunch", "🥗", "Buitenland"],
+        ["15:00", "Cake", "🍰", "Buitenland"],
+        ["16:30", "Karaoke", "🎤", "Buitenland"],
+        ["18:00", "Dinner", "🍽️", "Buitenland"],
+        ["20:00", "First Dance", "💞", "Buitenland"],
+        ["20:05", "Partay", "🎉", "Buitenland"],
+        ["22:30", "Silent Disco", "🎧", "Buitenland"],
+        ["01:00", "Chilling At The Campfire", "🔥", "Buitenland"],
     ],
     sunday : [
-        ["14:30", "Wedding", "<3", "Buitenland"],
-        ["14:30", "Wedding", "<3", "Buitenland"],
+        ["09:00 - 11:00", "Leftover Breakfast", "<3", "Buitenland"],
+        ["11:00 - ??:??", "Cleaning up", "<3", "Buitenland"],
         ["14:30", "Wedding", "<3", "Buitenland"],
     ]
 }

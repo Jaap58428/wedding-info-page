@@ -88,6 +88,10 @@ nav ul li a:hover {
     z-index: 1;
 }
 
+#passwordbg {
+    height: 100vh;
+}
+
 .streetview_poster {
     object-fit: cover;
     position: absolute;
@@ -104,7 +108,23 @@ nav ul li a:hover {
     margin: 0 auto;
 }
 
-.intro h1 {
+.password_check {
+    z-index: 2;
+    width: 75%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.password_check input, .password_check button {
+    width: 50%;
+    padding: 2rem;
+    margin: 2rem auto;
+    font-size: 2rem;
+}
+
+.password_check h1, .intro h1 {
     font-size: 4rem;
     margin: 2rem 0;
     text-align: center;

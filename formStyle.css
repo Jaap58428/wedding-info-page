@@ -68,3 +68,9 @@ fieldset {
 .submit-box input {
     justify-self: right;
 }
+
+@media (max-width: 800px) {
+    form {
+        width: 80vw;
+    }
+}

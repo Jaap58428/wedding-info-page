@@ -37,7 +37,8 @@ const updateCountDown = (countDownDate) => {
     }
     else
     {
-        document.getElementById("countdown").innerHTML = `${monthDifference} months ${days} days ${hours}:${minutes}:${seconds}<br>until we say <span class="IDO">"I DO!"</span>`;
+        document.getElementById("countdown").innerHTML = `${days} days ${hours}:${minutes}:${seconds}<br>until we say <span class="IDO">"I DO!"</span>`;
+        // document.getElementById("countdown").innerHTML = `${monthDifference} months ${days} days ${hours}:${minutes}:${seconds}<br>until we say <span class="IDO">"I DO!"</span>`;
     }
 }
 

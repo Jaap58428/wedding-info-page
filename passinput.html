@@ -34,7 +34,7 @@
         correctPass = 'adventure'
         inputElement = document.getElementById('passinput')
 
-        if (inputElement.value == correctPass) {
+        if (inputElement.value.toLowerCase() == correctPass) {
             localStorage.setItem('password', correctPass);
             window.location.href = 'index.html'
         } else {

@@ -17,7 +17,31 @@ fieldset {
 }
 
 .name input {
-    width: 85%;
+    flex-grow: 1;
+    margin-left: 1rem;
+}
+
+.submitbox {
+    display: flex;
+    justify-content: end;
+}
+
+.submitbutton {
+    padding: 1rem;
+    font-size: 2rem;
+    border: 0;
+    cursor: pointer;
+    background-color: var(--lightGreenColor);
+    color: white;
+}
+
+.nights_sleeping p {
+    margin-bottom: 1rem;
+}
+
+.nights_sleeping label {
+    font-size: 1.7rem;
+    margin: 0.7rem;
 }
 
 .sharing_tippies_warning {
@@ -25,9 +49,20 @@ fieldset {
     color: crimson  ;
 }
 
-.allergies input {
+.rsvp_hidden {
+    display: none;
+}
+
+.rsvp_show {
+    display: initial;
+}
+
+.allergies textarea {
+    margin-top: 1rem;
     height: 8rem;
-    width: 85%
+    width: 100%;
+    font-family: sans-serif;
+    padding: 0.5rem;
 }
 
 .submit-box input {

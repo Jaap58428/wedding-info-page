@@ -20,9 +20,8 @@ timeline_data =
         ["01:00", "Chilling At The Campfire", "🔥", "Buitenland"],
     ],
     sunday : [
-        ["09:00 - 11:00", "Leftover Breakfast", "<3", "Buitenland"],
-        ["11:00 - ??:??", "Cleaning up", "<3", "Buitenland"],
-        ["14:30", "Wedding", "<3", "Buitenland"],
+        ["09:00 - 11:00", "Leftover Breakfast", "🍛", "Buitenland"],
+        ["11:00 - ??:??", "Cleaning up", "🧼", "Buitenland"],
     ]
 }
 
@@ -47,16 +46,24 @@ for (const days in timeline_data) {
             new_tl_item = document.createElement('div')
             new_tl_item.classList.add('tl_item')
 
+            if (counter === 0) {new_tl_item.classList.add('tl_item_entry_friday')}
+            if (counter === 1) {new_tl_item.classList.add('tl_item_entry_saturday')}
+            if (counter === 2) {new_tl_item.classList.add('tl_item_entry_sunday')}
+
+            data_index = 0
+
             entry.forEach(data_item => {
                 new_tl_item_entry = document.createElement('div')
                 new_tl_item_entry.classList.add('tl_item_entry')
-                
-                if (counter === 0) {new_tl_item_entry.classList.add('tl_item_entry_friday')}
-                if (counter === 1) {new_tl_item_entry.classList.add('tl_item_entry_saturday')}
-                if (counter === 2) {new_tl_item_entry.classList.add('tl_item_entry_sunday')}
+
+                if (data_index == 2) {
+                    new_tl_item_entry.classList.add('timeline_emoji')
+                }
 
                 new_tl_item_entry.innerHTML = data_item
                 new_tl_item.appendChild(new_tl_item_entry)
+
+                data_index += 1
             });
             
             timeline_container.appendChild(new_tl_item)

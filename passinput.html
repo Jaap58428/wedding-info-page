@@ -30,20 +30,12 @@
 </body>
 
 <script>
-    const setCookie = (cname, cvalue, exdays) => {
-        var d = new Date();
-        d.setTime(d.getTime() + (exdays*24*60*60*1000));
-        var expires = "expires="+ d.toUTCString();
-        document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
-    }
-
     const checkPass = () => {
         correctPass = 'adventure'
         inputElement = document.getElementById('passinput')
 
         if (inputElement.value == correctPass) {
-            // cookie is set for 10 years: 365 days x 10
-            setCookie('password', 'adventure', 3650)
+            localStorage.setItem('password', correctPass);
             window.location.href = 'index.html'
         } else {
             alert("Password incorrect. If you can't remember the password please contact the bride or groom.")            

@@ -14,10 +14,6 @@
 </head>
 
 <body>
-
-    <script>
-        alert("TODO MAKE A NICE JS WITH OPENING QUESTIONS AS YOU ANSWER THEM")
-    </script>
     <nav class="regular-nav">
         <ul>
             <li><a href="index.html">Home</a></li>
@@ -61,20 +57,20 @@
             <fieldset class="sleeping">
                 <h2>I want to sleep there:</h2>
                 <div>
-                    <input type="radio" id="sleeping_yes" name="sleeping" value="yes">
-                    <label for="sleeping_yes">Yes</label><br>
-                    <input type="radio" id="sleeping_no" name="sleeping" value="no">
-                    <label for="sleeping_no">No</label><br>
+                    <input onclick="showSleepBox()" type="radio" id="sleeping_yes" name="sleeping" value="yes">
+                    <label onclick="showSleepBox()" for="sleeping_yes">Yes</label><br>
+                    <input onclick="hideSleepBox()" type="radio" id="sleeping_no" name="sleeping" value="no">
+                    <label onclick="hideSleepBox()" for="sleeping_no">No</label><br>
                 </div>
             </fieldset>
 
-            <div class="sharing_tippies_warning">
+            <div class="sharing_tippies_warning rsvp_hidden">
                 <p>Please note: It is very likely that you will be sharing your tippie/yurt with a few other guests.</p>
                 <p>If that is a no go for you, but you do want to sleep at the location, please let us know so we can see
                     what we can arrange for you.</p>
             </div>
 
-            <fieldset class="nights_sleeping">
+            <fieldset class="nights_sleeping rsvp_hidden">
                 <h2>Which nights do you want to sleep there?</h2>
                 <p>(you may select all, as all nights are included)</p>
                 <input type="checkbox" id="friday_saturday" name="friday_saturday" value="yes">
@@ -86,13 +82,43 @@
             </fieldset>
 
             <fieldset class="allergies">
-                <h2>All the food will be vegan. <br> If you have any allergies that we should know about, please let us know here.</h2>
-                <input type="text" name="allergies">
+                <h2>If you have any allergies that need to be catered for (all food is vegan) or if there is anything else we should know, please let us know here.</h2>
+                <h2></h2>
+                <!-- <h2>All the food will be vegan. <br> If you have any allergies that we should know about, please let us know here.</h2> -->
+                <textarea name="allergies"></textarea>
             </fieldset>
 
-            <input type="submit" value="Send"> MAKE ME STAND RIGHT
+            <div class="submitbox">
+                <input class="submitbutton" type="submit" value="Send">
+            </div>
         </form>
     </main>
 </body>
+
+<script>
+    const showSleepBox = () => {
+        hiddenElements = document.getElementsByClassName('rsvp_hidden')
+        
+        for (const key in hiddenElements) {
+            if (Object.hasOwnProperty.call(hiddenElements, key)) {
+                const el = hiddenElements[key];
+                el.style.display = 'block'
+            }
+        }
+
+    }
+
+    const hideSleepBox = () => {
+        hiddenElements = document.getElementsByClassName('rsvp_hidden')
+        
+        for (const key in hiddenElements) {
+            if (Object.hasOwnProperty.call(hiddenElements, key)) {
+                const el = hiddenElements[key];
+                el.style.display = 'none'
+            }
+        }
+
+    }
+</script>
 
 </html>

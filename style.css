@@ -28,6 +28,19 @@ body {
     font-size: 1.8rem;
 }
 
+.heavyred {
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+.secret {
+    color: #000;
+    background-color: white;
+    padding: 0.5rem;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bold;
+}
+
 .active {
     color: var(--lightGreenColor);
     text-decoration: overline 2px;
@@ -89,7 +102,10 @@ nav ul li a:hover {
 }
 
 #passwordbg {
+    background-image: url('img/462.jpg');
+    background-size: cover;
     height: 100vh;
+    background-position: 60% 50%;
 }
 
 .streetview_poster {
@@ -326,6 +342,10 @@ nav ul li a:hover {
 }
 
 @media (max-width: 500px) {
+    #passinput {
+        width: 80%;
+    }
+
     nav {
         display: none;
     }

@@ -166,7 +166,7 @@ nav ul li a:hover {
     font-size: 3rem;
     color: var(--darkGreenColor);
     /* text-shadow: 2px 0 0 black, -2px 0 0 black, 0 2px 0 black, 0 -2px 0 black, 1px 1px black, -1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black; */
-    background-color: rgba(253, 253, 253, 0.5);
+    background-color: rgba(253, 253, 253, 0.7);
     border-radius: 1rem;
     padding: 2rem;
     margin: 2rem 0;

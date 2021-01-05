@@ -1,3 +1,9 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
 form {
     width: 60vw;
     margin: 2rem auto;
@@ -14,6 +20,37 @@ fieldset {
 .name, .coming, .sleeping {
     display: flex;
     justify-content: space-between;
+}
+
+label, input {
+    cursor: pointer;
+}
+
+.coming label, .sleeping label {
+    font-size: 1.7rem;
+    vertical-align: 2px;
+}
+
+input[type="radio"] {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+
+    border-radius: 50%;
+    width: 1.6rem;
+    height: 1.6rem;
+
+    border: 2px solid white;
+    background-color: white;
+    margin-right: 5px;
+
+    /* position: relative;
+    top: 4px; */
+}
+
+input[type="radio"]:checked {
+    border: 2px solid white;
+    background-color: black;
 }
 
 .name input {

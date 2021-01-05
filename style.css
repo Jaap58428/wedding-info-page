@@ -14,7 +14,7 @@ a {
     color: inherit;
 }
 
-p a{
+.info-item a{
     color: var(--darkGreenColor);
     text-decoration: underline;
 }
@@ -83,14 +83,6 @@ nav ul li a:hover {
     position: relative;
 }
 
-.landing-map {
-    width: 100%;
-    height: 50vh;
-    display: flex;
-    flex-direction: column;
-    position: relative;
-}
-
 .landing-poster>img {
     object-fit: cover;
     position: absolute;
@@ -100,6 +92,7 @@ nav ul li a:hover {
     left: 0;
     z-index: 1;
 }
+
 
 #passwordbg {
     background-image: url('img/462.jpg');
@@ -228,7 +221,7 @@ nav ul li a:hover {
 
 .info-item-image iframe {
     width: 100%;
-    height: 50vh;
+    height: 100%;
     object-fit: cover;
 }
 

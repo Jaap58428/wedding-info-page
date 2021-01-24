@@ -8,7 +8,8 @@
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="formStyle.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Commissioner&family=Indie+Flower&display=swap" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css2?family=Commissioner&family=Indie+Flower&display=swap"
+        rel="stylesheet">
     <title>RSVP</title>
     <script src="passwall.js"></script>
     <script src="burgermenu.js"></script>
@@ -38,58 +39,116 @@
     </div>
     <main>
         <!-- <form action="https://formspree.io/f/xleojkjo" method="POST"> -->
-        <script>
-            alert("DONT USE THIS FORM YET. IT IS NOT DONE YET AND ANY SUBMISSIONS WILL BE LOST")
-        </script>
-        <form action="#" method="POST">
-            <h1>Please fill in this form before <span class="deadline">Sunday 20th of June (20-6-21)</span> to let us know if you will be there to celebrate with us.</h1>
+        <form id="rsvp_form" action="#" method="POST">
+            <h1>Please fill in this form before <span class="deadline">Sunday 20th of June (20-6-21)</span> to let us
+                know if you will be there to celebrate with us.</h1>
             <fieldset class="name">
-                <h2>Name(s):</h2>
-                <input type="text" required name="name">
+                <div>
+                    <h2>Name(s)</h2>
+                    <a href="" onclick="alert(
+                        'We have worked really hard to create an intimate celebration that includes all of our closest family members and friends so we ask that you come solo unless we know your other half well. We will specify all guests on your invitation. We also ask that you make other arrangements for your children, as this is an adult affair. Thanks for understanding, and if you have any concerns about this please contact us directly.'
+                    )">Who can I bring?</a>
+                </div>
+                <input type="text" required name="name"
+                    placeholder="Yourself, plus whoever else is mentioned on your invitation.">
             </fieldset>
 
             <fieldset class="coming">
                 <h2>I will be there:</h2>
-                <div>
-                    <input type="radio" id="coming_yes" name="coming" value="yes">
-                    <label for="coming_yes">Yes</label><br>
-                    <input type="radio" id="coming_no" name="coming" value="no">
-                    <label for="coming_no">No</label><br>
+                <div class="input_container">
+                    <div>
+                        <label onclick="toggle_elements('coming_hidden', true)" for="coming_yes">Yes</label>
+                        <input onclick="toggle_elements('coming_hidden', true)" type="radio" id="coming_yes"
+                            name="coming" value="yes" required><br>
+                    </div>
+                    <div>
+                        <label onclick="toggle_elements('coming_hidden', false)" for="coming_no">No</label>
+                        <input onclick="toggle_elements('coming_hidden', false)" type="radio" id="coming_no"
+                            name="coming" value="no"><br> </div>
                 </div>
             </fieldset>
 
-            <fieldset class="sleeping">
-                <h2>I want to sleep there:</h2>
+            <fieldset class="coming coming_hidden">
+                <h2>My form of transport is:</h2>
+                <div class="input_container">
+                    <div>
+                        <label for="transport_ov">Public transport</label>
+                        <input type="radio" id="transport_ov" name="transport" value="ov" required><br>
+                    </div>
+                    <div>
+                        <label for="transport_car">Car / carpool</label>
+                        <input type="radio" id="transport_car" name="transport" value="car"><br>
+                    </div>
+                </div>
+            </fieldset>
+
+            <fieldset class="coming coming_hidden">
                 <div>
-                    <input onclick="showSleepBox()" type="radio" id="sleeping_yes" name="sleeping" value="yes">
-                    <label onclick="showSleepBox()" for="sleeping_yes">Yes</label><br>
-                    <input onclick="hideSleepBox()" type="radio" id="sleeping_no" name="sleeping" value="no">
-                    <label onclick="hideSleepBox()" for="sleeping_no">No</label><br>
+                    <h2>What's for dinner?:</h2>
+                    <p>Please enter 1 meal for everyone that comes.</p>
+                </div>
+                <div class="input_container">
+                    <div>
+                        <label for="dinner_chili">Chili sin carne - not spicy</label>
+                        <input type="number" value="0" name="dinner_chili" id="dinner_chili"><br>
+                    </div>
+                    <div>
+                        <label for="dinner_roti">Surinamese Roti (<a target="_blank" href="#"
+                                onclick="alert('A currydish inspired by different cultures, often made with thin flatbread, potatoes and longbeans.')">What's
+                                this?</a>)</label>
+                        <input type="number" value="0" name="dinner_roti" id="dinner_roti">
+                    </div>
+                </div>
+            </fieldset>
+
+            <fieldset class="sleeping coming_hidden">
+                <h2>I want to sleep there:</h2>
+                <div class="input_container">
+                    <div>
+                        <label onclick="toggle_elements('rsvp_hidden', true)" for="sleeping_yes">Yes</label>
+                        <input onclick="toggle_elements('rsvp_hidden', true)" type="radio" id="sleeping_yes"
+                            name="sleeping" value="yes" required><br>
+                    </div>
+                    <div>
+                        <label onclick="toggle_elements('rsvp_hidden', false)" for="sleeping_no">No</label>
+                        <input onclick="toggle_elements('rsvp_hidden', false)" type="radio" id="sleeping_no"
+                            name="sleeping" value="no"><br>
+                    </div>
                 </div>
             </fieldset>
 
             <div class="sharing_tippies_warning rsvp_hidden">
                 <p>Please note: It is very likely that you will be sharing your tippie/yurt with a few other guests.</p>
-                <p>If that is a no go for you, but you do want to sleep at the location, please let us know so we can see
+                <p>If that is a no go for you, but you do want to sleep at the location, please let us know so we can
+                    see
                     what we can arrange for you.</p>
             </div>
 
             <fieldset class="nights_sleeping rsvp_hidden">
-                <h2>Which nights do you want to sleep there?</h2>
-                <p>(you may select all, as all nights are included)</p>
-                <input type="checkbox" id="friday_saturday" name="friday_saturday" value="yes">
-                <label for="friday_saturday">Friday - Saturday</label><br>
-                <input type="checkbox" id="saturday_sunday" name="saturday_sunday" value="yes">
-                <label for="saturday_sunday">Saturday - Sunday</label><br>
-                <input type="checkbox" id="sunday_monday" name="sunday_monday" value="yes">
-                <label for="sunday_monday">Sunday - Monday</label>
+                <div>
+                    <h2>Which nights do you want to sleep there?</h2>
+                    <p>You may select all, as all nights are included.</p>
+                </div>
+                <div class="input_container">
+                    <div>
+                        <label for="friday_saturday">Friday - Saturday</label>
+                        <input type="checkbox" id="friday_saturday" name="friday_saturday" value="yes"><br>
+                    </div>
+                    <div>
+                        <label for="saturday_sunday">Saturday - Sunday</label>
+                        <input type="checkbox" id="saturday_sunday" name="saturday_sunday" value="yes"><br>
+                    </div>
+                    <div>
+                        <label for="sunday_monday">Sunday - Monday</label>
+                        <input type="checkbox" id="sunday_monday" name="sunday_monday" value="yes">
+                    </div>
+                </div>
             </fieldset>
 
-            <fieldset class="allergies">
-                <h2>If you have any allergies that need to be catered for (all food is vegan) or if there is anything else we should know, please let us know here.</h2>
-                <h2></h2>
-                <!-- <h2>All the food will be vegan. <br> If you have any allergies that we should know about, please let us know here.</h2> -->
-                <textarea name="allergies"></textarea>
+            <fieldset class="allergies coming_hidden">
+                <h2>If you have any allergies that need to be catered for (all food is vegan) or if there is anything
+                    else we should know, please let us know here.</h2>
+                <textarea name="allergies_or_info"></textarea>
             </fieldset>
 
             <div class="submitbox">
@@ -100,25 +159,38 @@
 </body>
 
 <script>
-    const showSleepBox = () => {
-        hiddenElements = document.getElementsByClassName('rsvp_hidden')
-        
-        for (const key in hiddenElements) {
-            if (Object.hasOwnProperty.call(hiddenElements, key)) {
-                const el = hiddenElements[key];
-                el.style.display = 'block'
+    const checkSubmits = () => {
+        results = `These are your results \n`
+
+        const formData = new FormData(document.querySelector('form'))
+        for (var pair of formData.entries()) {
+            if (pair[0] == 'allergies_or_info' && pair[1] == '') {
+                continue
             }
+            results += pair[0] + ': ' + pair[1] + `\n`
         }
 
+        results += `Is this correct?`
+
+        confirm(results)
+        // if (localStorage.getItem('rsvp_submitted')) {
+        //     confirm("You might already have submitted a RSVP form, are you sure?")
+        // } else {
+        //     localStorage.setItem("rsvp_submitted", true);
+        // }
     }
 
-    const hideSleepBox = () => {
-        hiddenElements = document.getElementsByClassName('rsvp_hidden')
-        
+    const toggle_elements = (class_name, is_visible) => {
+        hiddenElements = document.getElementsByClassName(class_name)
+
         for (const key in hiddenElements) {
             if (Object.hasOwnProperty.call(hiddenElements, key)) {
                 const el = hiddenElements[key];
-                el.style.display = 'none'
+                if (is_visible) {
+                    el.style.display = 'block'
+                } else {
+                    el.style.display = 'none'
+                }
             }
         }
 

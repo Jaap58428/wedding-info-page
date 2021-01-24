@@ -46,11 +46,11 @@
                 <div>
                     <h2>Name(s)</h2>
                     <a href="" onclick="alert(
-                        'We have worked really hard to create an intimate celebration that includes all of our closest family members and friends so we ask that you come solo unless we know your other half well. We will specify all guests on your invitation. We also ask that you make other arrangements for your children, as this is an adult affair. Thanks for understanding, and if you have any concerns about this please contact us directly.'
+                        'We have worked hard to create an intimate celebration that includes all of our closest family members and friends so we ask that you come solo unless we know your other half well. We will specify all guests on your invitation. We also ask that you make other arrangements for your children, as this is an adult affair. Thanks for understanding, and if you have any concerns about this please contact us directly.'
                     )">Who can I bring?</a>
                 </div>
                 <input type="text" required name="name"
-                    placeholder="Yourself, plus whoever else is mentioned on your invitation.">
+                    placeholder="Yourself, plus whoever else is on your invitation.">
             </fieldset>
 
             <fieldset class="coming">
@@ -64,7 +64,8 @@
                     <div>
                         <label onclick="toggle_elements('coming_hidden', false)" for="coming_no">No</label>
                         <input onclick="toggle_elements('coming_hidden', false)" type="radio" id="coming_no"
-                            name="coming" value="no"><br> </div>
+                            name="coming" value="no"><br> 
+                    </div>
                 </div>
             </fieldset>
 
@@ -72,12 +73,12 @@
                 <h2>My form of transport is:</h2>
                 <div class="input_container">
                     <div>
-                        <label for="transport_ov">Public transport</label>
-                        <input type="radio" id="transport_ov" name="transport" value="ov" required><br>
-                    </div>
-                    <div>
                         <label for="transport_car">Car / carpool</label>
                         <input type="radio" id="transport_car" name="transport" value="car"><br>
+                    </div>
+                    <div>
+                        <label for="transport_ov">Public transport</label>
+                        <input type="radio" id="transport_ov" name="transport" value="ov" required><br>
                     </div>
                 </div>
             </fieldset>
@@ -117,14 +118,14 @@
                 </div>
             </fieldset>
 
-            <div class="sharing_tippies_warning rsvp_hidden">
-                <p>Please note: It is very likely that you will be sharing your tippie/yurt with a few other guests.</p>
+            <div class="sharing_tippies_warning rsvp_hidden needs_block">
+                <p>Please note: It is very likely that you will be sharing your tippie/yurt with a few other guests.</p><br>
                 <p>If that is a no go for you, but you do want to sleep at the location, please let us know so we can
                     see
                     what we can arrange for you.</p>
             </div>
 
-            <fieldset class="nights_sleeping rsvp_hidden">
+            <fieldset class="nights_sleeping rsvp_hidden needs_block">
                 <div>
                     <h2>Which nights do you want to sleep there?</h2>
                     <p>You may select all, as all nights are included.</p>
@@ -145,7 +146,7 @@
                 </div>
             </fieldset>
 
-            <fieldset class="allergies coming_hidden">
+            <fieldset class="allergies">
                 <h2>If you have any allergies that need to be catered for (all food is vegan) or if there is anything
                     else we should know, please let us know here.</h2>
                 <textarea name="allergies_or_info"></textarea>
@@ -187,7 +188,11 @@
             if (Object.hasOwnProperty.call(hiddenElements, key)) {
                 const el = hiddenElements[key];
                 if (is_visible) {
-                    el.style.display = 'block'
+                    if (el.classList.contains('needs_block')) {
+                        el.style.display = 'block'
+                    } else {
+                        el.style.display = 'flex'
+                    }
                 } else {
                     el.style.display = 'none'
                 }

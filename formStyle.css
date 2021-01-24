@@ -121,9 +121,11 @@ fieldset > :nth-child(1) {
     margin: 0.7rem;
 }
 
-.sharing_tippies_warning p {
+.sharing_tippies_warning {
     font-size: 2rem;
-    color: crimson  ;
+    background-color: crimson;
+    padding: 1rem;
+    color: white;
 }
 
 .rsvp_hidden {

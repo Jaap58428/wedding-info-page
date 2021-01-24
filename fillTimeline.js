@@ -1,11 +1,10 @@
 timeline_data = 
 {
     friday : [
-        // ["14:30", "Wedding", "<3", "Buitenland"],
         ["17:00", "Check-in", "🛎️", "Buitenland"],
         ["17:00 - 19:45", "Free Time", "⛱️", "Wherever you want"],
         ["20:00", "Legal Ceremony", "💏", "In front of Big Tipi"],
-        ["21:00", "Small Toast At The Campfire", "🥂", "Buitenland"],
+        ["21:00", "Small Toast", "🥂", "Buitenland"],
     ],
     saturday : [
         ["11:00", "Departure To Church", "🚌", "Buitenland"],

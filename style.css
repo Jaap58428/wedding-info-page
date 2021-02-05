@@ -293,13 +293,13 @@ nav ul li a:hover {
 }
 
 .tl_item_entry_friday {
-    background-color: rgb(148, 211, 158);
+    background-color: rgb(223, 160, 29);
 }
 .tl_item_entry_saturday {
-    background-color: rgb(148, 198, 211);
+    background-color: rgba(229, 103, 61, 0.87);
 }
 .tl_item_entry_sunday {
-    background-color: rgb(211, 148, 195);
+    background-color: rgba(212, 71, 49, 0.89);
 }
 
 /* .timeline_container > div {

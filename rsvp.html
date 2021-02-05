@@ -38,8 +38,7 @@
         </a>
     </div>
     <main>
-        <!-- <form action="https://formspree.io/f/xleojkjo" method="POST"> -->
-        <form id="rsvp_form" action="#" method="POST">
+        <form id="rsvp_form" action="https://formspree.io/f/xleojkjo" method="POST">
             <h1>Please fill in this form before <span class="deadline">Sunday 20th of June (20-6-21)</span> to let us
                 know if you will be there to celebrate with us.</h1>
             <fieldset class="name">
@@ -91,13 +90,13 @@
                 <div class="input_container">
                     <div>
                         <label for="dinner_chili">Chili sin carne - not spicy</label>
-                        <input type="number" value="0" name="dinner_chili" id="dinner_chili"><br>
+                        <input type="number" min="0" max="2" value="0" name="dinner_chili" id="dinner_chili"><br>
                     </div>
                     <div>
                         <label for="dinner_roti">Surinamese Roti (<a target="_blank" href="#"
                                 onclick="alert('A currydish inspired by different cultures, often made with thin flatbread, potatoes and longbeans.')">What's
                                 this?</a>)</label>
-                        <input type="number" value="0" name="dinner_roti" id="dinner_roti">
+                        <input type="number" min="0" max="2" value="0" name="dinner_roti" id="dinner_roti">
                     </div>
                 </div>
             </fieldset>

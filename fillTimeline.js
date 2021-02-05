@@ -1,26 +1,27 @@
 timeline_data = 
 {
     friday : [
-        ["17:00", "Check-in", "🛎️", "Buitenland"],
-        ["17:00 - 19:45", "Free Time", "⛱️", "Wherever you want"],
-        ["20:00", "Legal Ceremony", "💏", "In front of Big Tipi"],
-        ["21:00", "Small Toast", "🥂", "Buitenland"],
+        ["From 17:00", "Check-in For Overnight Guests", "🛎️", "'t Buitenland"],
+        ["17:00 - 19:45", "Free Time", "⛱️", "Wherever You Want"],
+        ["20:00", "Legal Ceremony", "💏", "In Front Of Big Tipi"],
+        ["21:00", "Small Toast", "🥂", "'t Buitenland"],
     ],
     saturday : [
-        ["11:00", "Departure To Church", "🚌", "Buitenland"],
-        ["12:00", "Church Wedding", "💒", "Somewhere"],
-        ["13:00", "Toast & Lunch", "🥗", "Buitenland"],
-        ["15:00", "Cake", "🍰", "Buitenland"],
-        ["16:30", "Karaoke", "🎤", "Buitenland"],
-        ["18:00", "Dinner", "🍽️", "Buitenland"],
-        ["20:00", "First Dance", "💞", "Buitenland"],
-        ["20:05", "Partay", "🎉", "Buitenland"],
-        ["22:30", "Silent Disco", "🎧", "Buitenland"],
-        ["01:00", "Chilling At The Campfire", "🔥", "Buitenland"],
+        ["11:00", "All Guests Meet At The Venue", "🤝", "'t Buitenland"],
+        ["11:15", "Departure To Church", "🚌", "In Front Of 't Buitenland"],
+        ["12:00", "Church Wedding", "💒", "Sint-Jozefkerk Tilburg"],
+        ["14:00", "Toast", "🥂", "'t Buitenland"],
+        ["14:30", "Cake", "🍰", "'t Buitenland"],
+        ["16:30", "Karaoke", "🎤", "'t Buitenland"],
+        ["18:00", "Dinner", "🍽️", "'t Buitenland"],
+        ["20:00", "First Dance", "💞", "'t Buitenland"],
+        ["20:05", "Partay", "🎉", "'t Buitenland"],
+        ["22:30", "Silent Disco", "🎧", "'t Buitenland"],
+        ["01:00", "Chilling At The Campfire", "🔥", "'t Buitenland"],
     ],
     sunday : [
-        ["09:00 - 11:00", "Leftover Breakfast", "🍛", "Buitenland"],
-        ["11:00 - ??:??", "Cleaning up", "🧼", "Buitenland"],
+        ["09:00 - 11:00", "Leftover Breakfast", "🍛", "'t Buitenland"],
+        ["11:00 - ??:??", "Cleaning up", "🧼", "'t Buitenland"],
     ]
 }
 

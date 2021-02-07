@@ -11,6 +11,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Commissioner&family=Indie+Flower&display=swap"
         rel="stylesheet">
     <title>RSVP</title>
+    <meta name="description" content="Welcome to our weddingsite! Here you find all info for our wedding. See you there!">
     <script src="passwall.js"></script>
     <script src="burgermenu.js"></script>
 </head>
@@ -44,7 +45,7 @@
             <fieldset class="name">
                 <div>
                     <h2>Name(s)</h2>
-                    <a href="" onclick="alert(
+                    <a class="info_click" onclick="alert(
                         'We have worked hard to create an intimate celebration that includes all of our closest family members and friends so we ask that you come solo unless we know your other half well. We will specify all guests on your invitation. We also ask that you make other arrangements for your children, as this is an adult affair. Thanks for understanding, and if you have any concerns about this please contact us directly.'
                     )">Who can I bring?</a>
                 </div>
@@ -53,7 +54,7 @@
             </fieldset>
 
             <fieldset class="coming">
-                <h2>I will be there:</h2>
+                <h2>I/we will be there:</h2>
                 <div class="input_container">
                     <div>
                         <label onclick="toggle_elements('coming_hidden', true)" for="coming_yes">Yes</label>
@@ -69,7 +70,7 @@
             </fieldset>
 
             <fieldset class="coming coming_hidden">
-                <h2>My form of transport is:</h2>
+                <h2>My/our form of transport is:</h2>
                 <div class="input_container">
                     <div>
                         <label for="transport_car">Car / carpool</label>
@@ -78,6 +79,10 @@
                     <div>
                         <label for="transport_ov">Public transport</label>
                         <input type="radio" id="transport_ov" name="transport" value="ov" required><br>
+                    </div>
+                    <div>
+                        <label for="transport_unknown">I don't know yet</label>
+                        <input type="radio" id="transport_unknown" name="transport" value="unknown" required><br>
                     </div>
                 </div>
             </fieldset>
@@ -93,8 +98,8 @@
                         <input type="number" min="0" max="2" value="0" name="dinner_chili" id="dinner_chili"><br>
                     </div>
                     <div>
-                        <label for="dinner_roti">Surinamese Roti (<a target="_blank" href="#"
-                                onclick="alert('A currydish inspired by different cultures, often made with thin flatbread, potatoes and longbeans.')">What's
+                        <label for="dinner_roti">Surinamese Roti (<a class="info_click"
+                                onclick="alert('A (not spicy) curry dish made of potatoes, longbeans and vegan chicken, served with thin flatbread.')">What's
                                 this?</a>)</label>
                         <input type="number" min="0" max="2" value="0" name="dinner_roti" id="dinner_roti">
                     </div>
@@ -102,7 +107,7 @@
             </fieldset>
 
             <fieldset class="sleeping coming_hidden">
-                <h2>I want to sleep there:</h2>
+                <h2>I/we want to sleep there:</h2>
                 <div class="input_container">
                     <div>
                         <label onclick="toggle_elements('rsvp_hidden', true)" for="sleeping_yes">Yes</label>
@@ -148,7 +153,7 @@
             <fieldset class="allergies">
                 <h2>If you have any allergies that need to be catered for (all food is vegan) or if there is anything
                     else we should know, please let us know here.</h2>
-                <textarea name="allergies_or_info"></textarea>
+                <textarea name="allergies_or_info"  maxlength="400"></textarea>
             </fieldset>
 
             <div class="submitbox">

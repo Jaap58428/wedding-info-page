@@ -14,7 +14,7 @@ a {
     color: inherit;
 }
 
-.info-item a{
+.info-item a {
     color: var(--darkGreenColor);
     text-decoration: underline;
 }
@@ -108,7 +108,7 @@ nav ul li a:hover {
     height: 100%;
     top: 0;
     left: 0;
-    z-index: 1; 
+    z-index: 1;
 }
 
 .landing-poster .intro {
@@ -130,7 +130,8 @@ nav ul li a:hover {
     flex-direction: column;
 }
 
-.password_check input, .password_check button {
+.password_check input,
+.password_check button {
     width: 50%;
     padding: 2rem;
     margin: 2rem auto;
@@ -145,7 +146,8 @@ nav ul li a:hover {
     background-color: rgb(137, 216, 137);
 }
 
-.password_check h1, .intro h1 {
+.password_check h1,
+.intro h1 {
     font-size: 4rem;
     margin: 2rem 0;
     text-align: center;
@@ -241,17 +243,20 @@ nav ul li a:hover {
     margin: 0 auto;
 }
 
-.timeline_container > * > :nth-child(1) {
+.timeline_container>*> :nth-child(1) {
     width: 20%;
 }
-.timeline_container > * > :nth-child(2) {
+
+.timeline_container>*> :nth-child(2) {
     width: 30%;
 
 }
-.timeline_container > * > :nth-child(3) {
+
+.timeline_container>*> :nth-child(3) {
     width: 10%;
 }
-.timeline_container > * > :nth-child(4) {
+
+.timeline_container>*> :nth-child(4) {
     width: 30%;
 }
 
@@ -267,7 +272,7 @@ nav ul li a:hover {
     text-align: center;
 }
 
-.tl_header_category{
+.tl_header_category {
     display: inline-block;
     text-align: center;
 }
@@ -291,13 +296,14 @@ nav ul li a:hover {
     vertical-align: text-top;
     padding: 0;
 }
-
 .tl_item_entry_friday {
     background-color: rgb(223, 160, 29);
 }
+
 .tl_item_entry_saturday {
     background-color: rgba(229, 103, 61, 0.87);
 }
+
 .tl_item_entry_sunday {
     background-color: rgba(212, 71, 49, 0.89);
 }
@@ -358,7 +364,8 @@ nav ul li a:hover {
         font-size: 2rem;
     }
 
-    .countdown, .IDO {
+    .countdown,
+    .IDO {
         font-size: 2rem;
     }
 

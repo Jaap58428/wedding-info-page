@@ -23,6 +23,7 @@
             <li><a href="location.html">Location</a></li>
             <li><a href="timeline.html">Timeline</a></li>
             <li class="active"><a href="rsvp.html">RSVP</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
             <li><a href="contact.html">Contact</a></li>
         </ul>
     </nav>
@@ -32,6 +33,7 @@
             <a href="location.html">Location</a>
             <a href="timeline.html">Timeline</a>
             <a href="rsvp.html">RSVP</a>
+            <a href="gallery.html">Gallery</a>
             <a href="contact.html">Contact</a>
         </div>
         <a href="javascript:void(0);" class="icon" onclick="openMenu()">
@@ -46,7 +48,7 @@
                 <div>
                     <h2>Name(s)</h2>
                     <a class="info_click" onclick="alert(
-                        'We have worked hard to create an intimate celebration that includes all of our closest family members and friends so we ask that you come solo unless we know your other half well. We will specify all guests on your invitation. We also ask that you make other arrangements for your children, as this is an adult affair. Thanks for understanding, and if you have any concerns about this please contact us directly.'
+                        'We have worked hard to create an intimate celebration that includes all of our closest family members and friends, so we ask that you come solo unless we know your other half well. We will specify all guests on your invitation. Thanks for understanding, and if you have any concerns about this please contact us directly.'
                     )">Who can I bring?</a>
                 </div>
                 <input type="text" required name="name"
@@ -56,12 +58,12 @@
             <fieldset class="coming">
                 <h2>I/we will be there:</h2>
                 <div class="input_container">
-                    <div>
+                    <div id="coming_container_yes">
                         <label onclick="toggle_elements('coming_hidden', true)" for="coming_yes">Yes</label>
                         <input onclick="toggle_elements('coming_hidden', true)" type="radio" id="coming_yes"
                             name="coming" value="yes" required><br>
                     </div>
-                    <div>
+                    <div  id="coming_container_no">
                         <label onclick="toggle_elements('coming_hidden', false)" for="coming_no">No</label>
                         <input onclick="toggle_elements('coming_hidden', false)" type="radio" id="coming_no"
                             name="coming" value="no"><br> 
@@ -78,11 +80,11 @@
                     </div>
                     <div>
                         <label for="transport_ov">Public transport</label>
-                        <input type="radio" id="transport_ov" name="transport" value="ov" required><br>
+                        <input class="makeRequired" type="radio" id="transport_ov" name="transport" value="ov"><br>
                     </div>
                     <div>
                         <label for="transport_unknown">I don't know yet</label>
-                        <input type="radio" id="transport_unknown" name="transport" value="unknown" required><br>
+                        <input type="radio" id="transport_unknown" name="transport" value="unknown"><br>
                     </div>
                 </div>
             </fieldset>
@@ -111,8 +113,8 @@
                 <div class="input_container">
                     <div>
                         <label onclick="toggle_elements('rsvp_hidden', true)" for="sleeping_yes">Yes</label>
-                        <input onclick="toggle_elements('rsvp_hidden', true)" type="radio" id="sleeping_yes"
-                            name="sleeping" value="yes" required><br>
+                        <input class="makeRequired" onclick="toggle_elements('rsvp_hidden', true)" type="radio" id="sleeping_yes"
+                            name="sleeping" value="yes"><br>
                     </div>
                     <div>
                         <label onclick="toggle_elements('rsvp_hidden', false)" for="sleeping_no">No</label>
@@ -204,6 +206,32 @@
         }
 
     }
+
+    const makeRequired = () => {
+        makeMeRequired = document.getElementsByClassName('makeRequired')
+        
+        for (let i = 0; i < makeMeRequired.length; i++) {
+            const element = makeMeRequired.item(i);
+            element.required = true
+            
+        }
+
+    }
+
+    
+    const UndoMakeRequired = () => {
+        makeMeRequired = document.getElementsByClassName('makeRequired')
+        
+        for (let i = 0; i < makeMeRequired.length; i++) {
+            const element = makeMeRequired.item(i);
+            element.required = false
+            
+        }
+
+    }
+
+    document.getElementById('coming_container_yes').onclick = makeRequired
+    document.getElementById('coming_container_no').onclick = UndoMakeRequired
 </script>
 
 </html>

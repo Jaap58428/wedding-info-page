@@ -7,7 +7,7 @@ timeline_data =
         ["21:00", "Small Toast", "🥂", "'t Buitenland"],
     ],
     saturday : [
-        ["11:00", "All Guests Meet At The Venue", "🤝", "'t Buitenland"],
+        ["11:00", "All Guests Meet At The Venue", "🕚", "'t Buitenland"],
         ["11:15", "Departure To Church", "🚌", "In Front Of 't Buitenland"],
         ["12:00", "Church Wedding", "💒", "Sint-Jozefkerk Tilburg"],
         ["14:00", "Toast", "🥂", "'t Buitenland"],
@@ -21,7 +21,7 @@ timeline_data =
     ],
     sunday : [
         ["09:00 - 11:00", "Leftover Breakfast", "🍛", "'t Buitenland"],
-        ["11:00 - ??:??", "Cleaning up", "🧼", "'t Buitenland"],
+        ["11:00 - ??:??", "Cleaning up - Helping is appreciated", "🧼", "'t Buitenland"],
     ]
 }
 

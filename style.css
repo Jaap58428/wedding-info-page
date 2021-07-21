@@ -314,6 +314,11 @@ nav ul li a:hover {
     text-align: center;
 } */
 
+.onedrive_gallery {
+    width: 100%;
+    min-height: 30%;
+}
+
 
 @media (max-width: 800px) {
 
